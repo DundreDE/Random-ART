@@ -13,8 +13,8 @@ Ein einfaches Projekt, das einen zufälligen Kunstgenerator erstellt. Benutzer k
 ## Installation
 
 1. Klone das Repository:
- ```bash
- git clone https://github.com/dundrede/random-art.git
+  ```bash
+  git clone https://github.com/dundrede/random-art.git
 
 2. Öffne die index.html-Datei in deinem Webbrowser.
 
