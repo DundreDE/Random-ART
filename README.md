@@ -26,6 +26,9 @@ Klicken Sie auf die Schaltfläche "Download Art", um das Bild herunterzuladen.
 
 ## Demo
 
+   '''bash
+   https://dundrede.github.io/Random-ART/
+
 ## Lizenz
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die LICENSE Datei für Details.
@@ -56,6 +59,9 @@ Click the "Generate Art" button to create the artwork.
 Click the "Download Art" button to download the image. 
 
 ## Demo
+
+   '''bash
+   https://dundrede.github.io/Random-ART/
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
