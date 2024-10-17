@@ -26,7 +26,7 @@ Klicken Sie auf die Schaltfläche "Download Art", um das Bild herunterzuladen.
 
 ## Demo
 
-   ```bash
+
    https://dundrede.github.io/Random-ART/
 
 ## Lizenz
@@ -61,7 +61,7 @@ Click the "Download Art" button to download the image.
 
 ## Demo
 
-   '''bash
+
    https://dundrede.github.io/Random-ART/
 
 ## License
