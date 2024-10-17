@@ -1,11 +1,20 @@
 const canvas = document.getElementById("art-canvas");
 const ctx = canvas.getContext("2d");
+
+const shapeCountSlider = document.getElementById("shapeCount");
+const shapeCountValue = document.getElementById("shapeCountValue");
+
 document.getElementById("generate").addEventListener("click", generateRandomArt);
 document.getElementById("download").addEventListener("click", downloadArt);
+shapeCountSlider.addEventListener("input", updateShapeCount);
+
+function updateShapeCount() {
+    shapeCountValue.textContent = shapeCountSlider.value;
+}
 
 function generateRandomArt() {
-    const numberOfShapes = 20 + Math.floor(Math.random() * 30); // Random number of shapes (between 20 and 50)
-    
+    const numberOfShapes = parseInt(shapeCountSlider.value, 10); // Get number of shapes from slider
+
     // Clear the canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
