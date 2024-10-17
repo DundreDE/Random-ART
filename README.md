@@ -26,6 +26,9 @@ Klicken Sie auf die Schaltfläche "Download Art", um das Bild herunterzuladen.
 
 ## Demo
 
+
+   https://dundrede.github.io/Random-ART/
+
 ## Lizenz
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die LICENSE Datei für Details.
@@ -44,6 +47,7 @@ A simple project that creates a random art generator. Users can adjust the numbe
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/dundrede/random-art.git
    
@@ -56,6 +60,9 @@ Click the "Generate Art" button to create the artwork.
 Click the "Download Art" button to download the image. 
 
 ## Demo
+
+
+   https://dundrede.github.io/Random-ART/
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
