@@ -53,7 +53,7 @@ A simple project that creates a random art generator. Users can adjust the numbe
 
 Adjust the slider to choose the number of desired shapes.
 Click the "Generate Art" button to create the artwork.
-Click the "Download Art" button to download the image.
+Click the "Download Art" button to download the image. 
 
 ## Demo
 
