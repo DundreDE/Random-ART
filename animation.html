@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a202c;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #animationCanvas {
+            border: 2px solid white;
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px; 
+            cursor: pointer;
+            background-color: #4caf50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-3xl font-bold mb-4">Animation</h1>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <canvas id="animationCanvas"></canvas>
+
+    <script src="animation.js"></script>
+</body>
+</html>
