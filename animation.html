@@ -25,6 +25,24 @@
             height: 100vh;
             display: none;
             box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        
+        .fullscreen-hint {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 20;
+            display: none;
+            backdrop-filter: blur(10px);
         }
         
         .controls {
@@ -217,6 +235,9 @@
     </div>
     
     <canvas id="animationCanvas"></canvas>
+    <div class="fullscreen-hint" id="fullscreenHint">
+        🎮 Drücke ESC um die Animation zu beenden
+    </div>
 
     <script src="animation.js"></script>
 </body>

@@ -288,6 +288,7 @@ const backgroundCheckbox = document.getElementById('backgroundAnimation');
 const resetButton = document.getElementById('resetButton');
 const presetNeonButton = document.getElementById('presetNeon');
 const presetCalmButton = document.getElementById('presetCalm');
+const fullscreenHint = document.getElementById('fullscreenHint');
 
 // Event Listeners für Steuerungselemente
 shapeCountSlider.addEventListener('input', (e) => {
@@ -342,6 +343,13 @@ presetNeonButton.addEventListener('click', () => {
     speedSlider.value = 2;
     speedValue.textContent = '2';
     backgroundCheckbox.checked = true;
+    
+    // Bestehende Formen mit neuen Farben aktualisieren
+    shapes.forEach(shape => {
+        shape.color = getColorByMode('neon');
+        shape.dx = shape.dx * 2 / animationSettings.speed;
+        shape.dy = shape.dy * 2 / animationSettings.speed;
+    });
 });
 
 presetCalmButton.addEventListener('click', () => {
@@ -358,11 +366,20 @@ presetCalmButton.addEventListener('click', () => {
     speedSlider.value = 0.5;
     speedValue.textContent = '0.5';
     backgroundCheckbox.checked = false;
+    
+    // Bestehende Formen mit neuen Farben aktualisieren
+    shapes.forEach(shape => {
+        shape.color = getColorByMode('pastel');
+        shape.dx = shape.dx * 0.5 / animationSettings.speed;
+        shape.dy = shape.dy * 0.5 / animationSettings.speed;
+        shape.trail = []; // Trails löschen
+    });
 });
 
 // Start-Button-Event
 startButton.addEventListener('click', () => {
     canvas.style.display = 'block';
+    fullscreenHint.style.display = 'block';
     shapes = [];
     particles = [];
     enterFullscreen();
@@ -374,6 +391,17 @@ stopButton.addEventListener('click', () => {
     cancelAnimationFrame(animationId);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     canvas.style.display = 'none';
+    fullscreenHint.style.display = 'none';
+});
+
+// ESC-Taste zum Beenden
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && canvas.style.display === 'block') {
+        cancelAnimationFrame(animationId);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        canvas.style.display = 'none';
+        fullscreenHint.style.display = 'none';
+    }
 });
 
 // Fenstergröße-Anpassung
